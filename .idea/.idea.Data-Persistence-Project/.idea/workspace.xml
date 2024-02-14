@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4af3d913-2784-4d2a-9bc5-f8bbe27e3fbb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Data-Persistence-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Data-Persistence-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +14,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HandleData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.2/Editor/BurstAotSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_FontAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/AssertionFailureOnOutputVertexCount.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Layout/ContentSizeFitterTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/TextEditor/TextEditorTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707924533651</updated>
-      <workItem from="1707924550879" duration="655000" />
+      <workItem from="1707924550879" duration="6732000" />
     </task>
     <servers />
   </component>

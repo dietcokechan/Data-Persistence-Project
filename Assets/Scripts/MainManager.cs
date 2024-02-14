@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class MainManager : MonoBehaviour
 {
@@ -12,12 +14,15 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject GameOverText;
-    
+    public Text PlayerText;
+        
+    private string playerName;
     private bool m_Started = false;
     private int m_Points;
     
     private bool m_GameOver = false;
 
+    private int highscore;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +41,20 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
+        SetPlayerName();
+    }
+
+    private void GetPlayerName()
+    {
+        HandleData.Instance.LoadInfo();
+        playerName = HandleData.Instance.playerName;
+        highscore = HandleData.Instance.newScore;
+    }
+
+    private void SetPlayerName()
+    {
+        GetPlayerName();
+        PlayerText.text = "Name: " + playerName + " || Best Score: " + highscore;
     }
 
     private void Update()
@@ -55,11 +74,16 @@ public class MainManager : MonoBehaviour
         }
         else if (m_GameOver)
         {
+            HandleData.Instance.SaveInfo();
+            HandleData.Instance.LoadInfo();
+            SetPlayerName();
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+        HandleData.Instance.isGameOver = m_GameOver;
     }
 
     void AddPoint(int point)
@@ -72,5 +96,14 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        SendScore(m_Points);
+    }
+
+    private void SendScore(int points)
+    {
+        if (m_GameOver)
+        {
+            HandleData.Instance.newScore = points;
+        }
     }
 }
